@@ -1,10 +1,9 @@
--- 1. Sử dụng lại CSDL ss5
+
 USE ss5;
 
--- 2. Xóa bảng products nếu đã tồn tại (để tránh lỗi)
 DROP TABLE IF EXISTS products;
 
--- 3. Tạo bảng products
+-- Tạo bảng products
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY, 
     product_name VARCHAR(100) NOT NULL,        
@@ -13,7 +12,7 @@ CREATE TABLE products (
     stock_quantity INT NOT NULL               
 );
 
--- 4. Thêm dữ liệu mẫu
+-- Thêm dữ liệu mẫu
 INSERT INTO products (product_name, category, price, stock_quantity)
 VALUES
 ('Laptop Dell XPS 13', 'Electronics', 25999.99, 10),
